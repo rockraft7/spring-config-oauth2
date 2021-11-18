@@ -1,0 +1,1 @@
+org.springframework.cloud.bootstrap.BootstrapConfiguration=my.gov.dbkl.klcares.configoauth2.CustomConfigLocator
