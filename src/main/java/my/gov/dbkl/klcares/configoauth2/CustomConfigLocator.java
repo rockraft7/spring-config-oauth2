@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.config.client.ConfigClientProperties;
 import org.springframework.cloud.config.client.ConfigServicePropertySourceLocator;
 import org.springframework.context.annotation.Bean;
@@ -45,6 +46,7 @@ public class CustomConfigLocator extends ConfigServicePropertySourceLocator {
 
     @Primary
     @Bean
+    @ConditionalOnProperty(name = "spring.cloud.config.oauth2.enabled", matchIfMissing = true)
     public ConfigServicePropertySourceLocator configServicePropertySourceLocator() {
         ConfigServicePropertySourceLocator sourceLocator = new ConfigServicePropertySourceLocator(configClientProperties);
         sourceLocator.setRestTemplate(restTemplate());

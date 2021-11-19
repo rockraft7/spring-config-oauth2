@@ -9,6 +9,15 @@ public class CustomConfigClientProperties {
     private String clientSecret;
     private String scope = "email";
     private String grantType = "client_credentials";
+    private Boolean enabled = true;
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
 
     public String getUrl() {
         return url;
