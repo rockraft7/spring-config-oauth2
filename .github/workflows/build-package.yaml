@@ -20,6 +20,6 @@ jobs:
       - name: Create settings
         uses: whelk-io/maven-settings-xml-action@v20
         with:
-          servers: '[{ "id": "github", "username": "rockraft7", "password": "${{ secrets.GITHUB_TOKEN }}" }]'
+          servers: '[{ "id": "github", "username": "rockraft7", "password": "${{ secrets.MVN_TOKEN }}" }]'
       - name: Build with Maven
         run: mvn clean deploy -X
