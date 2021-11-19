@@ -11,7 +11,7 @@
     </parent>
     <groupId>my.gov.dbkl.klcares</groupId>
     <artifactId>spring-config-oauth2</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <properties>
         <java.version>11</java.version>
